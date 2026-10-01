@@ -295,6 +295,11 @@ h5 {
     min-width: 55px;
 }
 
+.my-email :hover {
+    color: gray;
+
+}
+
 .btn1 {
     border-radius: 50px;
     background-color: #20c997;
