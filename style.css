@@ -1,0 +1,315 @@
+body {
+    background-image: url(girl.jpg);
+    background-size: cover;
+    background-position: center;
+
+    margin: 0;
+    font-family: sans-serif;
+
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: #111418b3;
+    z-index: -1;
+}
+
+/* ================= NAVBAR ================= */
+
+.nav-bar {
+    background-color: rgba(0, 0, 0, 0.677);
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px 20px;
+    margin: 0;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 10;
+    height: 100px;
+}
+
+.name {
+    color: white;
+    margin: 0;
+    font-size: 40px;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 30px;
+
+    margin: 0 0 0 auto;
+    padding: 0;
+
+    list-style: none;
+}
+
+.nav-bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-bar ul li a:hover {
+    color: #20c997;
+}
+
+.nav-bar-icon {
+    margin: auto;
+}
+
+
+/* ================= HERO ================= */
+
+.great {
+    position: relative;
+
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 30px;
+    text-align: center;
+
+    padding: 50px;
+}
+
+.great h6 {
+    margin: 0 0 35px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.great h2 {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 400;
+}
+
+.great p {
+    margin: 35px 0 50px;
+    font-size: 30px;
+}
+
+
+/* ================= CHANGING TEXT ================= */
+
+.changing-text {
+    position: relative;
+    color: #ff305b;
+}
+
+.changing-text::after {
+    content: "Ashraf";
+
+    animation: changeText 6s infinite;
+}
+
+@keyframes changeText {
+
+    0%,
+    30% {
+        content: "Ashraf";
+    }
+
+    31%,
+    60% {
+        content: "Freelancer";
+    }
+
+    61%,
+    100% {
+        content: "Developer";
+    }
+}
+
+
+/* ================= BUTTON ================= */
+
+.button {
+    border-radius: 50px;
+    padding: 14px 40px;
+    font-size: 18px;
+    border: 4px solid #20c997;
+}
+
+
+/* ================= SETTINGS ================= */
+
+.settings {
+    position: fixed;
+
+    right: 0;
+    top: 50%;
+    color: gray;
+
+    transform: translateY(-50%);
+
+    background-color: gray;
+
+    font-size: 25px;
+    color: white;
+
+    z-index: 20;
+    border-radius: 20% 20% 0% 20%;
+    padding-left: 15px;
+    padding-right: 5px;
+
+    /* width: 50px; */
+}
+
+
+/* ================= SCROLL DOWN ================= */
+
+.scroll-down {
+    position: absolute;
+
+    bottom: 50px;
+    left: 50%;
+
+    color: white;
+    font-size: 20px;
+
+    animation: moveDown 1s infinite alternate;
+}
+
+@keyframes moveDown {
+
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translate(-50%, 10px);
+    }
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    background-color: white;
+
+    padding: 50px;
+
+    text-align: center;
+}
+
+.about h1 {
+    color: rgba(37, 43, 51, 0.055);
+    font-size: 100px;
+}
+
+.about-title {
+    position: relative;
+    text-align: center;
+    margin: 0;
+}
+
+.about-title h1 {
+    color: rgba(37, 43, 51, 0.1);
+    font-size: 80px;
+    margin: 0;
+}
+
+.about-title h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.about-title h3::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color: #20c997;
+    margin: 10px auto 0;
+}
+
+/* ================= MOBILE ================= */
+
+@media screen and (max-width: 768px) {
+
+    .great h6 {
+        font-size: 24px;
+    }
+
+    .great h2 {
+        font-size: 42px;
+    }
+
+    .great p {
+        font-size: 22px;
+    }
+
+    .nav-bar ul {
+        flex-wrap: wrap;
+    }
+
+    .nav-bar ul .contact {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+}
+
+/* ================================================== */
+
+span {
+    color: #20c997;
+}
+
+.about-me-text,
+h5 {
+    text-align: justify;
+}
+
+.personal-info {
+    text-align: left;
+}
+
+.info-row {
+    display: flex;
+    gap: 8px;
+    padding: 12px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.info-row strong {
+    min-width: 55px;
+}
+
+.btn1 {
+    border-radius: 50px;
+    background-color: #20c997;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+
+}
+
+.experience-stats {
+    margin-top: 45px;
+    border-top: 1px solid #dee2e6;
+    padding-top: 35px;
+}
+
+.experience-stats h2 {
+    color: #6c757d
+}
