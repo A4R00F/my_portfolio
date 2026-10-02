@@ -1,11 +1,9 @@
 body {
     background-image: url(girl.jpg);
     background-size: cover;
-    background-position: center;
-
+    background-position: right;
     margin: 0;
     font-family: sans-serif;
-
     position: relative;
 }
 
@@ -13,6 +11,7 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
+    /* top: 0; right: 0; bottom: 0; left: 0; */
     background-color: #111418b3;
     z-index: -1;
 }
@@ -21,16 +20,12 @@ body::before {
 
 .nav-bar {
     background-color: rgba(0, 0, 0, 0.677);
-
     display: flex;
     align-items: center;
-
     padding: 10px 20px;
     margin: 0;
-
     position: sticky;
     top: 0;
-
     z-index: 10;
     height: 100px;
 }
@@ -317,4 +312,117 @@ h5 {
 
 .experience-stats h2 {
     color: #6c757d
+}
+
+/* What I Do Section */
+.what-i-do {
+    background-color: #f1f1f1;
+    padding: 50px 30px 70px;
+    text-align: center;
+}
+
+.container-what-i-do {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.what-i-do-title {
+    /* inside the what-i-do section (h1, h3) */
+    position: relative;
+    text-align: center;
+    margin: 0;
+}
+
+.what-i-do-title h1 {
+    color: #252b330e;
+    font-size: 150px;
+    margin: 0;
+}
+
+.what-i-do-title h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+
+.what-i-do-title>h1::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 1px;
+    background-color: #20c997;
+    margin: auto;
+    /* margin-top: 50px; */
+}
+
+.services-list {
+    margin-top: 55px;
+}
+
+.service-item {
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.service-icon {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #fff; */
+}
+
+.service-icon img {
+    width: 100%;
+    max-width: 180px;
+    height: 110px;
+    object-fit: cover;
+    box-shadow: 0 0 0 rgba(32, 192, 140, 0);
+    transition: box-shadow 0.3s ease;
+
+}
+
+.service-icon:hover img {
+    box-shadow: 4px 4px 4px rgba(32, 192, 140, 0.4);
+
+    /* transform: translate(-5px, -5px); */
+}
+
+
+.service-content {
+    text-align: left;
+}
+
+.service-content h5 {
+    margin: 0 0 0px;
+    font-size: 28px;
+}
+
+.service-content p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+@media (max-width: 767.98px) {
+    .what-i-do {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .service-item {
+        margin-bottom: 30px;
+    }
+
+    .service-icon img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .service-content {
+        text-align: center;
+    }
 }
